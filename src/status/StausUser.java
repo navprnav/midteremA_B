@@ -10,10 +10,20 @@ package status;
  * @author srinivsi
  */
 public class StausUser 
+        
 {
+     public enum userStatus{zero,one,two,three}
+     
+     public class Enumstatus{
+     userStatus status;
+     }
+     public StausUser(userStatus status)
+     {
+     this.status=status;
+     }
    public void statusDetail(String code)
 {
-switch(code.toUpperCase())
+switch(status.toUpperCase())
         {
         case "ZERO": System.out.println("REJECTED");
         break;
